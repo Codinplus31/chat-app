@@ -1,7 +1,7 @@
+require("dotenv").config()
 const UserModel = require("../models/UserModel")
 const bcryptjs = require('bcryptjs')
 const jwt = require('jsonwebtoken')
-
 async function checkPassword(request,response){
     try {
         const { password, userId } = request.body
